@@ -1,0 +1,45 @@
+version: '2'
+
+services:
+  registry:
+    container_name: talos-registry
+    restart: always
+    image: registry:2
+    environment:
+      REGISTRY_HTTP_TLS_CERTIFICATE: /certs/domain.crt
+      REGISTRY_HTTP_TLS_KEY: /certs/domain.key
+      REGISTRY_STORAGE_DELETE_ENABLED: "true"
+      REGISTRY_LOG_ACCESSLOG_DISABLED: "false"
+    volumes:
+      - ./data:/var/lib/registry
+      - ./certs:/certs
+    networks:
+      registry:
+        ipv4_address: 10.11.0.2
+
+  mitmproxy:
+    container_name: talos-mitmproxy
+    restart: always
+    image: mitmproxy/mitmproxy
+    command:
+      - mitmweb
+      - --web-iface
+      - 0.0.0.0
+      - --showhost
+      - --ssl-insecure
+    volumes:
+      - ./certs:/home/mitmproxy/.mitmproxy
+    networks:
+      registry:
+        ipv4_address: 10.11.0.3
+
+networks:
+  registry:
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.enable_icc: "true"
+      com.docker.network.bridge.name: "registry0"
+    ipam:
+      config:
+        - subnet: 10.11.0.0/24
+          gateway: 10.11.0.1

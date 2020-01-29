@@ -1,0 +1,3 @@
+[plugins.cri.registry.mirrors]
+  [plugins.cri.registry.mirrors."*"]
+    endpoint = ["https://10.11.0.2:5000"]
