@@ -1,4 +1,5 @@
 k8s.gcr.io/hyperkube:v1.17.0 hyperkube:v1.17.0
+k8s.gcr.io/hyperkube:v1.17.1 hyperkube:v1.17.1
 k8s.gcr.io/etcd:3.3.15-0 etcd:3.3.15-0
 k8s.gcr.io/pause:3.1 pause:3.1
 k8s.gcr.io/coredns:1.6.5 coredns:1.6.5
@@ -12,3 +13,18 @@ quay.io/cilium/hubble:latest cilium/hubble:latest
 quay.io/isovalent/hubble-ui:latest isovalent/hubble-ui:latest
 docker.io/prom/prometheus:v2.6.1 prom/prometheus:v2.6.1
 docker.io/grafana/grafana:6.2.5 grafana/grafana:6.2.5
+k8s.gcr.io/hyperkube:v1.17.0 k8s.gcr.io/hyperkube:v1.17.0
+k8s.gcr.io/hyperkube:v1.17.1 k8s.gcr.io/hyperkube:v1.17.1
+k8s.gcr.io/etcd:3.3.15-0 k8s.gcr.io/etcd:3.3.15-0
+k8s.gcr.io/pause:3.1 k8s.gcr.io/pause:3.1
+k8s.gcr.io/coredns:1.6.5 k8s.gcr.io/coredns:1.6.5
+quay.io/coreos/flannel:v0.11.0-amd64 quay.io/coreos/flannel:v0.11.0-amd64
+quay.io/coreos/flannel-cni:v0.3.0 quay.io/coreos/flannel-cni:v0.3.0
+docker.io/autonomy/pod-checkpointer:latest docker.io/autonomy/pod-checkpointer:latest
+docker.io/autonomy/installer:latest docker.io/autonomy/installer:latest
+quay.io/cilium/cilium:v1.6.5 quay.io/cilium/cilium:v1.6.5
+quay.io/cilium/operator:v1.6.5 quay.io/cilium/operator:v1.6.5
+quay.io/cilium/hubble:latest quay.io/cilium/hubble:latest
+quay.io/isovalent/hubble-ui:latest quay.io/isovalent/hubble-ui:latest
+docker.io/prom/prometheus:v2.6.1 docker.io/prom/prometheus:v2.6.1
+docker.io/grafana/grafana:6.2.5 docker.io/grafana/grafana:6.2.5

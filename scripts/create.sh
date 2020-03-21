@@ -1,1 +1,1 @@
-osctl cluster create --name my-cluster --input-dir . --masters 1 --workers 2
+/home/jsimonetti/dev/talos/_out/osctl-linux-amd64 cluster create --name my-cluster --input-dir . --masters 1 --workers 2 --init-node-as-endpoint --registry-mirror docker.io=https://10.11.0.2:5000/docker.io --registry-mirror k8s.gcr.io=https://10.11.0.2:5000/k8s.gcr.io --registry-mirror quay.io=https://10.11.0.2:5000/quay.io
